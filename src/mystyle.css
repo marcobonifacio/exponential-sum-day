@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'header header header'
+    'summary summary summary'
+    'date output output'
+    'controls output output';
+}
+
+.header {
+  grid-area: header;
+  background-color: steelblue;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.summary {
+  grid-area: summary;
+  background-color: lightsteelblue;
+  padding: 10px;
+}
+
+.date, .controls, .output {
+  padding: 10px;
+}
+
+.date {
+  grid-area: date;
+}
+
+.controls {
+  grid-area: controls;
+}
+
+.output {
+  grid-area: output;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas: 
+      'header header header'
+      'summary summary summary'
+      'controls controls controls'
+      'date date date'
+      'output output output';
+  }
+}

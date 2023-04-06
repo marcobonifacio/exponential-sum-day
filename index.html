@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" />
 <head>
-    <title>Exponential sums of the day</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2023.03.1/pyscript.css" />
-    <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
+  <title>Exponential sums of the day</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://pyscript.net/releases/2023.03.1/pyscript.css" />
+  <link rel="stylesheet" href="src/mystyle.css" />
+  <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
 </head>
 <body>
-    <py-config src="src/pyscript.toml"></py-config>
-    <py-script src="src/main.py"></py-script>
+  <div class="grid-container">
+    <div class="header">
+      <h1>Exponential Sum of the Day</h1>
+    </div>
+    <div class="summary">
+      <p></p>
+    </div>
+    <div class="date">
+      
+    </div>
+    <div class="controls">
+      
+    </div>
+    <div class="output" id="canvas">
+      
+    </div>
+  </div>
+  <py-config src="src/pyscript.toml"></py-config>
+  <py-script src="src/main.py"></py-script>
 </body>
 </html>
