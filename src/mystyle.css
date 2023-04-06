@@ -12,7 +12,9 @@ body {
     'header header header'
     'summary summary summary'
     'date output output'
-    'controls output output';
+    'control1 output output'
+    'control2 output output'
+    'control3 output output';
 }
 
 .header {
@@ -29,16 +31,27 @@ body {
   padding: 10px;
 }
 
-.date, .controls, .output {
+.date, .output, .control1,
+.control2, .control3 {
   padding: 10px;
 }
 
 .date {
   grid-area: date;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.controls {
-  grid-area: controls;
+.control1 {
+  grid-area: control1;
+}
+
+.control2 {
+  grid-area: control2;
+}
+
+.control3 {
+  grid-area: control3;
 }
 
 .output {
@@ -50,8 +63,13 @@ body {
     grid-template-areas: 
       'header header header'
       'summary summary summary'
-      'controls controls controls'
+      'control1 control1 control1'
+      'control2 control2 control2'
+      'control3 control3 control3'
       'date date date'
       'output output output';
+  }
+  .date {
+    text-align: center;
   }
 }
