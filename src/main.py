@@ -22,13 +22,15 @@ def p(giorno, mese, anno, N, step):
         order='sort'
     ).properties(
         title='{}/{}/{}'.format(giorno, mese, anno)
-    ).configure(
-        title=alt.VgTitleConfig(font='calibri', fontSize=16, fontWeight='bold')
+    ).configure_title(
+        font='calibri',
+        fontSize=16,
+        fontWeight='bold'
     ).configure_axis(
         grid=False, 
         domain=False, 
         labels=False, 
-        ticks=False,
+        ticks=False
     ).configure_view(
         strokeOpacity=0,
         height=350,
