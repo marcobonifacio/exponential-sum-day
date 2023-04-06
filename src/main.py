@@ -13,9 +13,6 @@ def p(giorno, mese, anno, N, step):
     z = np.array([np.exp(2 * np.pi * 1j * f(n, giorno, mese, anno)) 
         for n in range(3, N * 3, step)])
     z = z.cumsum()
-    df = pd.DataFrame([z.real, z.imag]).T.reset_index()
-    df.columns = ['sort', 'real', 'imag']
-    alt.data_transformers.enable('json')
     fig, ax = plt.subplots(figsize=(4, 4))
     ax.plot(z.real, z.imag, color='#4c78a8')
     ax.set_aspect(1)
