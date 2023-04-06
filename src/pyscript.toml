@@ -1,0 +1,4 @@
+name = "Exponential sums of the day"
+author_name = "Marco Bonifacio"
+author_email = "bonifacio.marco@gmail.com"
+packages = ["numpy", "matplotlib"]
