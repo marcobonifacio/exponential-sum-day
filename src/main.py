@@ -12,6 +12,8 @@ y = today.year
 
 div_date = js.document.getElementById('div-date')
 in_date = js.document.getElementById('in-date')
+in_n = js.document.getElementById('in-N')
+in_step = js.document.getElementById('in-step')
 
 in_date.value = today.strftime('%Y-%m-%d')
 
@@ -28,5 +30,11 @@ def p(giorno, mese, anno, N, step):
     plt.axis('off')
     return fig
 
-div_date.innerHTML = f'{d:02d}-{m:02d}-{y}'
-display(p(d, m, y, 10000, 1), target='canvas')
+def update(): 
+    y, m, d = [int(n) for n in in_date.value.split("-")]
+    n = int(in_n.value) * 10000
+    step = int(in_step.value)
+    div_date.innerHTML = f'{d:02d}-{m:02d}-{y}'
+    display(p(d, m, y, n, step), target='canvas')
+
+update()
