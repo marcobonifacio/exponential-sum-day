@@ -4,11 +4,16 @@ import matplotlib.pyplot as plt
 
 import js
 
-d = dt.datetime.today().day
-m = dt.datetime.today().month
-y = dt.datetime.today().year
+today = dt.datetime.today()
+
+d = today.day
+m = today.month
+y = today.year
 
 div_date = js.document.getElementById('div-date')
+in_date = js.document.getElementById('in-date')
+
+in_date.value = today.strftime('%Y-%m-%d')
 
 def f(n, d, m, t):
     return n / d + n ** 2 / m + n ** 3 / y
