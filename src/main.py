@@ -4,20 +4,13 @@ import matplotlib.pyplot as plt
 
 import js
 
-today = dt.datetime.today()
-
-d = today.day
-m = today.month
-y = today.year
-
-div_date = js.document.getElementById('div-date')
 in_date = js.document.getElementById('in-date')
 in_n = js.document.getElementById('in-N')
 in_step = js.document.getElementById('in-step')
 
-in_date.value = today.strftime('%Y-%m-%d')
+in_date.value = dt.datetime.today().strftime('%Y-%m-%d')
 
-def f(n, d, m, t):
+def f(n, d, m, y):
     return n / d + n ** 2 / m + n ** 3 / y
 
 def p(giorno, mese, anno, N, step):
@@ -31,10 +24,12 @@ def p(giorno, mese, anno, N, step):
     return fig
 
 def update(): 
-    y, m, d = [int(n) for n in in_date.value.split("-")]
+    y, m, d = [int(n) for n in in_date.value.split('-')]
     n = int(in_n.value) * 10000
     step = int(in_step.value)
-    div_date.innerHTML = f'{d:02d}-{m:02d}-{y}'
-    display(p(d, m, y, n, step), target='canvas')
+    display(n, target='out-N', append=False)
+    display(step, target='out-step', append=False)
+    display(f'{d:02d}-{m:02d}-{y}', target='div-date', append=False)
+    display(p(d, m, y, n, step), target='canvas', append=False)
 
 update()

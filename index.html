@@ -20,15 +20,17 @@
     </div>
     <div class="control1">
       <label for="in-date">Data</label>
-      <input type="date" id="in-date"></input>
+      <input type="date" id="in-date" py-change="update()"></input>
     </div>
     <div class="control2">
       <label for="in-N">N</label>
-      <input type="range" id="in-N" value="1" min="1" max="10"></input>
+      <input type="range" id="in-N" value="5" min="1" max="10" py-change="update()"></input>
+      <span id="out-N"></span>
     </div>
     <div class="control3">
       <label for="in-step">Step</label>
-      <input type="range" id="in-step" value="1" min="1" max="10"></input>
+      <input type="range" id="in-step" value="1" min="1" max="10" py-change="update()"></input>
+      <span id="out-step"></span>
     </div>
     <div class="output" id="canvas">
     </div>
