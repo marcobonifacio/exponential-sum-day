@@ -3,77 +3,13 @@
 }
 
 body {
+  background-color:  slategray;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-areas: 
-    'header header header'
-    'summary summary summary'
-    'date output output'
-    'control1 output output'
-    'control2 output output'
-    'control3 output output';
-}
-
-.header {
-  grid-area: header;
-  background-color: steelblue;
-  padding: 20px;
-  text-align: center;
-  font-size: 25px;
-}
-
-.summary {
-  grid-area: summary;
-  background-color: lightsteelblue;
-  padding: 10px;
-}
-
-.output, .control1,
-.control2, .control3 {
-  display: flex;
-  padding: 10px;
-  align-items: center;
-  gap: 3px;
-}
-
-.date {
-  grid-area: date;
-  padding: 10px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.control1 {
-  grid-area: control1;
-}
-
-.control2 {
-  grid-area: control2;
-}
-
-.control3 {
-  grid-area: control3;
-}
-
-.output {
-  grid-area: output;
+  float: left;
 }
 
 @media (max-width: 600px) {
-  .grid-container {
-    grid-template-areas: 
-      'header header header'
-      'summary summary summary'
-      'control1 control1 control1'
-      'control2 control2 control2'
-      'control3 control3 control3'
-      'date date date'
-      'output output output';
-  }
-  .date {
-    text-align: center;
+  body {
+    clear: left;
   }
 }
