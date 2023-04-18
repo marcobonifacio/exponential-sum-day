@@ -23,8 +23,11 @@ def p(giorno, mese, anno, N, step):
     plt.axis('off')
     return fig
 
-def update(): 
-    y, m, d = [int(n) for n in in_date.value.split('-')]
+def update():
+    try:
+      y, m, d = [int(n) for n in in_date.value.split('-')]
+    except ValueError:
+      y, m, d = [int(n) for n in dt.datetime.today().strftime('%Y-%m-%d').split('-')]
     n = int(in_n.value) * 10000
     step = int(in_step.value)
     display(n, target='out-N', append=False)
