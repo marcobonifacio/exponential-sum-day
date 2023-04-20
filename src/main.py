@@ -7,6 +7,7 @@ import js
 in_date = js.document.getElementById('in-date')
 in_n = js.document.getElementById('in-N')
 in_step = js.document.getElementById('in-step')
+spin = js.document.getElementById('spin')
 
 in_date.value = dt.datetime.today().strftime('%Y-%m-%d')
 
@@ -24,6 +25,7 @@ def p(giorno, mese, anno, N, step):
     return fig
 
 def update():
+    spin.style.visibility = 'visible'
     try:
       y, m, d = [int(n) for n in in_date.value.split('-')]
     except ValueError:
@@ -32,7 +34,8 @@ def update():
     step = int(in_step.value)
     display(n, target='out-N', append=False)
     display(step, target='out-step', append=False)
-    display(f'{d:02d}-{m:02d}-{y}', target='div-date', append=False)
+    display(f'{d:02d}-{m:02d}-{y}', target='date', append=False)
     display(p(d, m, y, n, step), target='canvas', append=False)
+    spin.style.visibility = 'hidden'
 
 update()
