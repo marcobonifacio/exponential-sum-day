@@ -32,7 +32,7 @@ def update():
     step = int(in_step.value)
     display(n, target='out-N', append=False)
     display(step, target='out-step', append=False)
-    display(f'{d:02d}-{m:02d}-{y}', target='div-date', append=False)
+    display(f'{d:02d}-{m:02d}-{y}', target='date', append=False)
     display(p(d, m, y, n, step), target='canvas', append=False)
 
 update()

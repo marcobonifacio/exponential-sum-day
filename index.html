@@ -7,32 +7,37 @@
   <link rel="stylesheet" href="https://pyscript.net/releases/2023.03.1/pyscript.css" />
   <link rel="stylesheet" href="src/mystyle.css" />
   <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
+  <script src="https://kit.fontawesome.com/38c5c2c5dc.js" crossorigin="anonymous"></script></head>
 </head>
 <body>
-  <div class="grid-container">
+  <div class="container">
     <div class="header">
       <h1>Exponential Sum of the Day</h1>
     </div>
     <div class="summary">
       <p>A different pattern every day, depending on date components. Idea borrowed from <a href="https://www.johndcook.com/expsum/">John D. Cook's blog</a>. Some more details <a href="https://www.johndcook.com/expsum/details.html">here</a>.</p>
     </div>
-    <div class="date" id="div-date">
-    </div>
-    <div class="control1">
-      <label for="in-date">Data</label>
-      <input type="date" id="in-date" py-change="update()"></input>
-    </div>
-    <div class="control2">
-      <label for="in-N">N</label>
-      <input type="range" id="in-N" value="5" min="1" max="10" py-change="update()"></input>
-      <span id="out-N"></span>
-    </div>
-    <div class="control3">
-      <label for="in-step">Step</label>
-      <input type="range" id="in-step" value="1" min="1" max="10" py-change="update()"></input>
-      <span id="out-step"></span>
-    </div>
-    <div class="output" id="canvas">
+    <div class="main">
+      <div class="column">
+        <div class="output">
+          <label for="in-date">Data</label>
+          <input type="date" id="in-date" py-change="update()"></input>
+        </div>
+        <div class="output">
+          <label for="in-N">N</label>
+          <input type="range" id="in-N" value="5" min="1" max="10" py-change="update()"></input>
+          <span id="out-N"></span>
+        </div>
+        <div class="output">
+          <label for="in-step">Step</label>
+          <input type="range" id="in-step" value="1" min="1" max="10" py-change="update()"></input>
+          <span id="out-step"></span>
+        </div>
+      </div>
+      <div class="column">
+        <div class="output" id="date"></div>
+        <div class="output" id="canvas"></div>
+      </div>
     </div>
   </div>
   <py-config src="src/pyscript.toml"></py-config>
