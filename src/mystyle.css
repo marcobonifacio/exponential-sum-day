@@ -6,15 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.spinner {
-  visibility: visible;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  color: gray;
-}
-
 .container {
   display: flex;
   flex-direction: column;
